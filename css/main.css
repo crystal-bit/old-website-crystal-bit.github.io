@@ -1,0 +1,255 @@
+
+:root {
+  /* Main colors */
+  /* --green-crystal: rgb(40, 97, 255);
+  --primary-color: rgb(40, 97, 255); */
+  --light-blue: #6fced2;
+  --light-green: #3f9d7f;
+
+  /* Backgrounds */
+  --green-dark: rgb(10, 25, 21);
+  --green-dark-1: rgb(34, 46, 42);
+  --container-dark: rgba(20, 20, 10, 200);
+}
+
+/* Generic page CSS */
+.small-img {
+    width: 250px;
+}
+
+.small-figure {
+    height: 300px;
+}
+
+pre {
+    padding: 1.0em;
+    border-radius: 0.40rem;
+    box-shadow: 0em 0em 0.6em 0.1em rgba(0, 0, 0, 0.6)
+}
+
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  background-image: linear-gradient(var(--green-dark-1) 0%, var(--green-dark) 75%);
+  /* background-image: radial-gradient(circle at center, var(--dark) 0%, var(--green-dark) 75%); */
+  background-size: cover;
+}
+
+body {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  color: #fff;
+  font-family: 'Chakra Petch';
+}
+
+body p {
+  font-size: 1.15rem;
+}
+
+p.lead {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--light-green);
+  font-family: 'Quantico';
+}
+
+.cover-container {
+  max-width: 48em;
+  width: 100%;
+}
+
+/*
+ * Main page /
+ */
+#logo {
+  /* max-height: inher;  */
+  height: 50px;
+}
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .5rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  text-shadow: var(--light-green) 0 0 0.8rem;
+  border-bottom-color: #fff;
+}
+
+img.small-pixel-art-icon {
+  height: 80px;
+  margin: 2em;
+  image-rendering: crisp-edges;
+  image-rendering: pixelated; /* fallback */
+}
+
+.row.tutorial {
+  margin-top: 4em;
+}
+
+.row.blog {
+  margin-top: 4em;
+}
+
+@media (max-width: 575.98px) { 
+  .row.tutorial,
+  .row.blog {
+    padding-left: 0em;
+    padding-right: 0em;
+  }
+
+  #yt-video-embed {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+@media (max-width: 767.98px) { }
+
+.cover .btn {
+  background-color: var(--green-dark-1);
+  border-color: var(--green-dark);
+  color: var(--light-blue);
+  font-size: 1.15em;
+  margin-top: 1em;
+  padding: 10px 14px 10px 14px;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+#yt-video-embed {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/*
+ * Cover
+ */
+.cover {
+}
+
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+.cover .headline {
+  min-height: 320px;
+  background-color: rgba(20, 20, 10, 200);
+  border-radius: 0.8em;
+  padding: 2em;
+  /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.6)), 
+    url('/img/bg.png');
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position: center 5%; */
+}
+
+.rounded-container {
+  background-color: var(--container-dark);
+  border-radius: 0.8em;
+  padding: 2em;
+}
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
+
+/*
+ * About page
+ */
+
+#about h2 {
+  margin-top: 2.2em;
+  margin-bottom: 0.6em;
+}
+
+ /*
+ * Post
+ */
+
+#post-container {
+  background-color: var(--green-dark);
+}
+
+.card {
+  border-color: var(--green-dark-1);
+}
+
+#post-container a {
+  color: var(--light-blue);
+}
+
+#post-container .alert-secondary {
+  background-color: var(--container-dark);
+  border-color: var(--green-dark-1);
+  color: white;
+}
+
+#post-container h2:not(:first-child) {
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+}
