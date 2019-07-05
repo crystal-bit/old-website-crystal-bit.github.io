@@ -231,6 +231,7 @@ img.small-pixel-art-icon {
  * Post
  */
 
+.main-panel,
 #post-container {
   background-color: var(--green-dark);
 }
@@ -239,6 +240,7 @@ img.small-pixel-art-icon {
   border-color: var(--green-dark-1);
 }
 
+.main-panel a,
 #post-container a {
   color: var(--light-blue);
 }
