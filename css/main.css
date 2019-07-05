@@ -231,13 +231,14 @@ img.small-pixel-art-icon {
  * Post
  */
 
-.main-panel,
+#about .card,
 #post-container {
   background-color: var(--green-dark);
 }
 
 .card {
   border-color: var(--green-dark-1);
+  border-width: 1px;
 }
 
 .main-panel a,
@@ -251,6 +252,7 @@ img.small-pixel-art-icon {
   color: white;
 }
 
+#about h2:not(:first-child),
 #post-container h2:not(:first-child) {
   margin-top: 2em;
   margin-bottom: 0.6em;
