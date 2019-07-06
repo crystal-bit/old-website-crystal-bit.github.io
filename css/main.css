@@ -13,6 +13,17 @@
 }
 
 /* Generic page CSS */
+
+#main-logo-link:hover {
+  text-decoration: none;
+  text-shadow: var(--light-blue) 0 0 0.8rem;
+  transition: 0.3s;
+}
+
+#main-logo-link {
+  transition: 0.3s;
+}
+
 .small-img {
     width: 250px;
 }
