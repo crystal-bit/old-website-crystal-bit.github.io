@@ -4,6 +4,7 @@
   /* --green-crystal: rgb(40, 97, 255);
   --primary-color: rgb(40, 97, 255); */
   --light-blue: #6fced2;
+  --light-blue-o5: rgb(111, 206, 210, 0.5);
   --light-green: #3f9d7f;
 
   /* Backgrounds */
@@ -14,14 +15,13 @@
 
 /* Generic page CSS */
 
-#main-logo-link:hover {
+.masthead a:hover {
   text-decoration: none;
-  text-shadow: var(--light-blue) 0 0 0.8rem;
-  transition: 0.3s;
+  text-shadow: var(--light-green) 0 0 1rem;
 }
 
-#main-logo-link {
-  transition: 0.3s;
+.masthead a {
+  transition: 0.5s;
 }
 
 .small-img {
@@ -93,9 +93,21 @@ p.lead {
   font-family: 'Quantico';
 }
 
-.cover-container {
+.body-container {
   max-width: 48em;
   width: 100%;
+}
+
+.main-container a:hover {
+  text-shadow: var(--light-green) 0 0 0.3rem;
+}
+
+.main-container a.btn:hover {
+  box-shadow: black 0 0.2rem 0.7rem;
+}
+
+.main-container a {
+  transition: 0.5s !important;
 }
 
 /*
