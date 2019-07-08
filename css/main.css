@@ -3,8 +3,8 @@
   /* Main colors */
   /* --green-crystal: rgb(40, 97, 255);
   --primary-color: rgb(40, 97, 255); */
+  --highlight-blue: #1bd5db;
   --light-blue: #6fced2;
-  --light-blue-o5: rgb(111, 206, 210, 0.5);
   --light-green: #3f9d7f;
 
   /* Backgrounds */
@@ -17,7 +17,7 @@
 
 .masthead a:hover {
   text-decoration: none;
-  text-shadow: var(--light-green) 0 0 1rem;
+  text-shadow: var(--highlight-blue) 0 0 1rem;
 }
 
 .masthead a {
@@ -99,7 +99,7 @@ p.lead {
 }
 
 .main-container a:hover {
-  text-shadow: var(--light-green) 0 0 0.3rem;
+  text-shadow: var(--highlight-blue) 0 0 0.3rem;
 }
 
 .main-container a.btn:hover {
