@@ -265,6 +265,7 @@ img.small-pixel-art-icon {
 }
 
 .main-panel a,
+#about a,
 #post-container a {
   color: var(--light-blue);
 }
