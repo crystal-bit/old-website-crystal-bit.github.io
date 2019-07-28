@@ -64,14 +64,16 @@ a:hover {
  * Base structure
  */
 
-html,
+html {
+  min-height: 100%;
+}
+
 body {
   background-image: linear-gradient(var(--green-dark-1) 0%, var(--green-dark) 75%);
   /* background-image: radial-gradient(circle at center, var(--dark) 0%, var(--green-dark) 75%); */
   background-size: cover;
-}
 
-body {
+  min-height: 100%;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -254,6 +256,10 @@ img.small-pixel-art-icon {
  * Post
  */
 
+#post-container h2, h3 {
+  text-transform: uppercase;
+}
+
 #about .card,
 #post-container {
   background-color: var(--green-dark);
@@ -280,4 +286,8 @@ img.small-pixel-art-icon {
 #post-container h2:not(:first-child) {
   margin-top: 2em;
   margin-bottom: 0.6em;
+}
+
+#post-container img {
+  max-width: 100%;
 }
