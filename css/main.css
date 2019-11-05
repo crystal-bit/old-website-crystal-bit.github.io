@@ -1,10 +1,10 @@
 
 :root {
   /* Main colors */
-  /* --green-crystal: rgb(40, 97, 255);
-  --primary-color: rgb(40, 97, 255); */
-  --highlight-blue: #1bd5db;
-  --light-blue: #6fced2;
+  --light-blue-logo: #91d9e8;
+    /* dark blue logo 5fcde4 */
+  --highlight-blue: #1bd5db; 
+  --light-blue: #6fced2; 
   --light-green: #3f9d7f;
 
   /* Backgrounds */
@@ -17,7 +17,7 @@
 
 .masthead a:hover {
   text-decoration: none;
-  text-shadow: var(--highlight-blue) 0 0 1rem;
+  text-shadow: var(--light-blue-logo) 0 0 1rem;
 }
 
 .masthead a {
@@ -101,7 +101,7 @@ p.lead {
 }
 
 .main-container a:hover {
-  text-shadow: var(--highlight-blue) 0 0 0.3rem;
+  text-shadow: var(--light-blue-logo) 0 0 0.3rem;
 }
 
 .main-container a.btn:hover {
@@ -150,7 +150,7 @@ p.lead {
 
 .nav-masthead .active {
   color: #fff;
-  text-shadow: var(--light-green) 0 0 0.8rem;
+  text-shadow: var(--light-blue-logo) 0 0 0.8rem;
   border-bottom-color: #fff;
 }
 
