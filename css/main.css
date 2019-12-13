@@ -3,9 +3,8 @@
   /* Main colors */
   --light-blue-logo: #91d9e8;
     /* dark blue logo 5fcde4 */
-  --highlight-blue: #1bd5db; 
-  --light-blue: #6fced2; 
-  --light-green: #3f9d7f;
+  --light-blue: #93ebee; 
+  --light-green: #7fdabd;
 
   /* Backgrounds */
   --green-dark: rgb(10, 25, 21);
@@ -13,15 +12,52 @@
   --container-dark: rgba(20, 20, 10, 200);
 }
 
-/* Generic page CSS */
+/*
+ * Header
+ */
+ .masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .5rem 0;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  text-shadow: var(--light-blue-logo) 0 0 0.8rem;
+  border-bottom-color: #fff;
+}
+
+.masthead a {
+  font-family: 'Quantico';
+  font-weight: 100;
+  transition: 0.5s;
+}
 
 .masthead a:hover {
   text-decoration: none;
   text-shadow: var(--light-blue-logo) 0 0 1rem;
 }
 
-.masthead a {
-  transition: 0.5s;
+.masthead #main-logo-link {
+  font-family: 'Chakra Petch';
 }
 
 .small-img {
@@ -39,6 +75,38 @@ pre {
 }
 
 /*
+* Headers
+*/
+h1 {
+  font-family: 'Quantico';
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--light-green);
+}
+
+h2 {
+  font-family: 'Quantico';
+  text-transform: uppercase;
+  font-size: 1.45rem;
+  padding-top: 0.5rem;
+  font-weight: 800;
+  color: #EAEAEA;
+}
+
+/*
+* Home landing page
+*/
+
+#landing h1 {
+  padding-top: 0.5rem;
+}
+
+#landing h2 {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+/*
  * Globals
  */
 
@@ -47,6 +115,17 @@ a,
 a:focus,
 a:hover {
   color: #fff;
+}
+
+.rounded-container {
+  background-color: var(--container-dark);
+  border-radius: 0.4em;
+  border-color: var(--green-dark-1);
+  border-width: 1px;
+}
+
+.extra-padding {
+  padding: 1.8em;
 }
 
 /* Custom default button */
@@ -81,18 +160,14 @@ body {
   -webkit-box-pack: center;
   justify-content: center;
   color: #fff;
-  font-family: 'Chakra Petch';
+  font-family: 'Open Sans';
+  font-weight: 100;
 }
 
 body p {
-  font-size: 1.15rem;
-}
-
-p.lead {
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: var(--light-green);
-  font-family: 'Quantico';
+  font-size: 18px;
+  font-weight: 100;
+  color: #EAEAEA;
 }
 
 .body-container {
@@ -118,40 +193,6 @@ p.lead {
 #logo {
   /* max-height: inher;  */
   height: 50px;
-}
-
-/*
- * Header
- */
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .5rem 0;
-  font-weight: 700;
-  color: rgba(255, 255, 255, .5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, .25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  text-shadow: var(--light-blue-logo) 0 0 0.8rem;
-  border-bottom-color: #fff;
 }
 
 img.small-pixel-art-icon {
@@ -182,15 +223,21 @@ img.small-pixel-art-icon {
   }
 }
 
-@media (max-width: 767.98px) { }
-
-.cover .btn {
+.btn {
   background-color: var(--green-dark-1);
   border-color: var(--green-dark);
   color: var(--light-blue);
   font-size: 1.15em;
+  font-family: "Quantico";
+  font-size: 1rem;
   margin-top: 1em;
   padding: 10px 14px 10px 14px;
+}
+
+.btn:hover {
+  background-color: var(--light-blue-logo);
+  border-color: var(--green-dark);
+  color: var(--green-dark-1);
 }
 
 @media (min-width: 48em) {
@@ -210,8 +257,6 @@ img.small-pixel-art-icon {
 /*
  * Cover
  */
-.cover {
-}
 
 .cover .btn-lg {
   padding: .75rem 1.25rem;
@@ -221,18 +266,7 @@ img.small-pixel-art-icon {
 .cover .headline {
   min-height: 320px;
   background-color: rgba(20, 20, 10, 200);
-  border-radius: 0.8em;
-  padding: 2em;
-  /* background-image: linear-gradient(to bottom, rgba(0,0,0,0.5),rgba(0,0,0,0.6)), 
-    url('/img/bg.png');
-  background-repeat: repeat-x;
-  background-size: auto 100%;
-  background-position: center 5%; */
-}
-
-.rounded-container {
-  background-color: var(--container-dark);
-  border-radius: 0.8em;
+  border-radius: 0.4em;
   padding: 2em;
 }
 
@@ -256,8 +290,9 @@ img.small-pixel-art-icon {
  * Post
  */
 
-#post-container h2, h3 {
-  text-transform: uppercase;
+#post-container .card-title {
+  font-size: 30px;
+  font-weight: 800;
 }
 
 #about .card,
@@ -265,13 +300,7 @@ img.small-pixel-art-icon {
   background-color: var(--green-dark);
 }
 
-.card {
-  border-color: var(--green-dark-1);
-  border-width: 1px;
-}
-
 .main-panel a,
-#about a,
 #post-container a {
   color: var(--light-blue);
 }
@@ -289,5 +318,23 @@ img.small-pixel-art-icon {
 }
 
 #post-container img {
+  display: block;
   max-width: 100%;
+  margin: auto;
+}
+
+#post-container blockquote {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 1rem;
+  margin-right: 2rem;
+  padding: 1rem;
+  font-style: italic;
+  border-left: #EAEAEA;
+  border-left-style: solid;
+  border-left-width: 2px;
+  border-spacing: 20px;
+}
+
+#post-container blockquote p:last-of-type {
+  margin-bottom: 0px;
 }
