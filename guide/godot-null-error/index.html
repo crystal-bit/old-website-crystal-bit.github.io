@@ -1,0 +1,73 @@
+<!doctype html><html lang=en><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-112742714-2"></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:site_name" content="Crystal Bit"><title>Godot: risolvere errori null instance</title><meta property="og:image" itemprop=image content="/img/logo.png"><meta name=description content="Ho ricevuto spesso richieste di aiuto per problemi con GDScript del tipo:
+Invalid set index …"><meta property="og:title" content="Godot: risolvere errori null instance"><meta property="og:url" content="https://crystal-bit.github.io/guide/godot-null-error/"><meta property="og:description" content="Ho ricevuto spesso richieste di aiuto per problemi con GDScript del tipo:
+Invalid set index …"><meta property="og:type" content="article"><link href="https://fonts.googleapis.com/css?family=Quantico" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&display=swap" rel=stylesheet><link rel="shortcut icon" type=image/x-icon href=/img/logo-transparent.png><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css integrity=sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4 crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.2.0/css/all.css integrity=sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ crossorigin=anonymous><link rel=stylesheet href=/css/main.css></head><body data-gr-c-s-loaded=true><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous defer></script><script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js integrity=sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ crossorigin=anonymous defer></script><script src=https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js integrity=sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm crossorigin=anonymous defer></script><script src=https://use.fontawesome.com/03364e4af9.js defer></script><div class="body-container d-flex h-100 py-3 mx-auto flex-column"><header class=masthead><div class=inner><h3 class=masthead-brand><a id=main-logo-link href=/><img id=logo src=/img/logo-transparent.png class=img-fluid alt>
+<span class=anim-left style=font-size:.8em>CRYSTAL BIT</span></a></h3><nav class="nav nav-masthead justify-content-center"><a class="nav-link
+anim-left" href=/about/>ABOUT</a>
+<a class="nav-link
+anim-left
+active" href=/guide/>GUIDE</a>
+<a class="nav-link
+anim-left" href=/blog/>BLOG</a>
+<a class="nav-link
+anim-left" href=/supporter/>SUPPORTER</a></nav></div></header><div class=main-container><div class="card rounded-container my-3"><div id=post-container class="card-body rounded-container-overlap"><h2 class=card-title>Godot: risolvere errori null instance</h2><div><div class=row style=padding-top:.5em><div class=col><span class="badge badge-secondary">godot</span></div><div class=col><p class="text-right text-muted">27/5/2020</p></div></div></div><hr><div id=post-body class=card-text><p>Ho ricevuto spesso richieste di aiuto per problemi con GDScript del tipo:</p><pre><code>Invalid set index 'position' (on base: 'null instance') [...]
+
+Invalid operands 'Nil' and [...]
+</code></pre><p>Chi si blocca di fronte a questo genere di problemi, probabilmente si sta
+appena avvicinando al mondo della programmazione.</p><p>L&rsquo;aiuto migliore che posso dare è spiegare cosa sia una <code>null instance</code> e
+spiegare quali strumenti esistono in Godot (ma non solo) per risolvere questi
+errori.</p><p>Una volta capito questo, affronterete questi errori in autonomia e con più
+consapevolezza.</p><h2 id=cosè-null>Cos&rsquo;è &ldquo;null&rdquo;?</h2><p>Null è un tipo di dato che rappresenta un qualcosa di indefinito o inesistente;
+un tipo di dato su cui non sono definite proprietà e su cui non si possono
+effettuare operazioni.</p><p>Detto così non aiuta molto, quindi vediamo un esempio di GDScript.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> a <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
+</code></pre></div><p>Questa scrittura salva il numero <code>10</code> (un <em>valore</em> di tipo <em>intero</em>, per essere
+precisi) all&rsquo;interno della <em>variabile</em> <code>a</code>.</p><p>Proviamo ora ad analizzare questo codice:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> x
+</code></pre></div><p>Questa istruzione GDScript è valida e viene eseguita senza problemi.<br>Cosa contiene ora <code>x</code>? Qual&rsquo;è il suo valore?</p><p>Se state pensando <em>&ldquo;x non contiene niente&rdquo;</em>, la risposta è sbagliata.</p><p><code>x</code> contiene qualcosa e quel <em>qualcosa</em> viene interpretato come <code>null</code>.</p><p>Per convincervi provate ad eseguire questo codice:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> x
+<span style=color:#66d9ef>var</span> y <span style=color:#f92672>=</span> null
+
+<span style=color:#66d9ef>if</span> x <span style=color:#f92672>==</span> y:
+    print(<span style=color:#e6db74>&#34;x è considerato uguale ad y&#34;</span>)
+</code></pre></div><p>Eseguendo questo codice verifichiamo che <code>x</code> viene valutato uguale ad <code>y</code>.</p><p>Questo è solo un esempio giocattolo, ma serve per capire che alcune variabili
+(ed anche alcune <em>espressioni</em>) possono essere interpretate come <code>null</code> durante
+l&rsquo;esecuzione del programma.</p><p>Ora vediamo un esempio reale dove può capitare di avere un valore nullo, senza
+crearlo ad-hoc come ho fatto in questo esempio.</p><blockquote><p>Per capire a fondo il concetto di <code>null</code> bisognerebbe parlare di
+gestione della memoria dei computer ed anche dell&rsquo;elettronica di cui
+sono composti. In questa guida però mi focalizzerò su Godot, tralasciando questi
+dettagli.</p></blockquote><h3 id=esempio---referenziare-un-percorso-invalido>Esempio - Referenziare un percorso invalido</h3><p>Supponiamo di avere una scena su Godot con un <code>Node2D</code> come root
+ed una <code>Sprite</code> come unico nodo della scena.</p><p><img src=img/tree-scena.png alt="Albero della scena"></p><p><em>Nota: tutti i discorsi fatti riguardo il nodo &ldquo;null&rdquo; e lo scripting valgono
+sia per il 2D che per il 3D.</em></p><p>Supponiamo di voler nascondere la sprite appena il gioco viene avviato. Per farlo
+aggiungiamo questo script a <code>Node2D</code>:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>extends</span> <span style=color:#a6e22e>Node2D</span>
+
+<span style=color:#66d9ef>func</span> _ready():
+    <span style=color:#66d9ef>var</span> sprite <span style=color:#f92672>=</span> get_node(<span style=color:#e6db74>&#34;Sprit&#34;</span>) <span style=color:#75715e># oppure la notazione alternativa &#34;$Sprit&#34;</span>
+    sprite<span style=color:#f92672>.</span>hide()
+</code></pre></div><p>Nello script c&rsquo;è un errore di battitura: il parametro che passiamo alla funzione
+<code>get_node</code> dovrebbe essere <code>Sprite</code> e non <code>Sprit</code>.</p><p>Se eseguiamo comunque quel codice, si ottiene questo errore:</p><pre><code>Attempt to call function 'hide' in base 'null instance' on a null instance.
+</code></pre><p>Significa che abbiamo provato ad accedere ad una funzione chiamata
+<code>hide</code> da un oggetto <code>null</code>.</p><h2 id=risolvere-lerrore>Risolvere l&rsquo;errore</h2><p>Godot aiuta molto lo sviluppatore in questi casi.</p><p>Ogni volta che c&rsquo;è un errore, aprirà l&rsquo;editor integrato mostrandovi il file che
+contiene l&rsquo;errore. In questo modo non dobbiamo cercare all&rsquo;interno di decine di
+script prima di trovare l&rsquo;errore.</p><p><img src=./img/debugger-overview.png alt="Debugger overview"></p><p>Focalizzatevi sul codice. Vedete quella piccola freccia verde nella parte
+sinistra dell&rsquo;editor?</p><p><img src=./img/debugger.png alt=Debugger></p><p>Quella freccia sta ad indicare che Godot ha fermato l&rsquo;esecuzione del gioco in
+quel punto.</p><p>Ora per capire ancora più a fondo cosa stia accadendo, guardate
+nella sezione <em>debugger</em> che si trova nella parte inferiore di Godot.</p><p><img src=./img/errore.png alt=errore></p><p>Qui troviamo una scritta rossa con il <strong>messaggio di errore</strong>. Questo è quello
+che ci fornisce informazioni (o indizi, se preferite) su dove andare a cercare
+il nostro problema.</p><p>Prima di tornare sul codice, guardate la parte destra del debugger: c&rsquo;è una
+lista di variabili con i rispettivi valori.</p><p><img src=img/errore-highlight.png alt="Errore highlight"></p><p>In questo semplice esempio abbiamo solo una variabile <code>sprite</code> (freccia 1)
+con valore <code>null</code> (freccia 2).</p><p>Ora possiamo intuire che deve esserci stato un errore
+nell&rsquo;inizializzazione di <code>sprite</code>. Riprendiamo il codice e correggiamo
+la riga 5 scrivendo:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> sprite <span style=color:#f92672>=</span> get_node(<span style=color:#e6db74>&#34;Sprite&#34;</span>)
+</code></pre></div><p>Eseguendo di nuovo il codice, il gioco partirà senza errori.</p><h2 id=conclusioni>Conclusioni</h2><p>Gli errori dovuti a valori null possono avvenire per molti motivi, non
+soltanto quando si sbaglia a scrivere il nome di un nodo.
+Ma l&rsquo;approccio per risolverli è sempre lo stesso.</p><p>Il debugger vi offrirà sempre utili indizi quindi prendete confidenza con
+questo strumento il più presto possibile.</p><p>Se volete approfondire questa parte vi consiglio di:</p><ol><li>Leggere cos&rsquo;è il debugging <a href=https://it.wikipedia.org/wiki/Debugging>su Wikipedia</a></li><li>Studiare e sperimentare con i <strong>breakpoint</strong> seguendo <a href=https://docs.godotengine.org/en/stable/tutorials/debug/overview_of_debugging_tools.html>la
+documentazione
+ufficiale di Godot</a></li></ol><p>Spero che questa guida vi sia stata di aiuto e vi abbia dato spunti per
+studiare e migliorare come sviluppatori di videogiochi.</p><p>Buon gamedev ed alla prossima.</p></div></div></div><hr><div class="card rounded-container my-3"><div id=post-container class="card-body rounded-container-overlap"><h5>SUPPORTAMI</h5><p>Questo sito web è privo di pubblicità ed i contenuti vengono rilasciati con licenze libere come CC-BY-SA e GPL.</p><p>Se i contenuti ti piacciono e ti sono stati utili, considera
+di supportare il progetto.</p><p>Visita <a href=https://crystal-bit.github.io/supporter/>la pagina
+supporter</a>.</p></div></div><hr><footer class="mastfoot mt-auto"><div class=row style=margin:auto><div class=col-sm-8><p><a rel=license href=http://creativecommons.org/licenses/by-sa/4.0/></a><a rel=license href=http://creativecommons.org/licenses/by-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-sa/4.0/80x15.png></a>
+<span style=margin-left:6px>Davide Cristini, 2020.</span></p></div><div class="col-sm-4 info"><a href=mailto:vitrumbit@gmail.com>Segnala un problema</a></div></div></footer></div></div><script type=text/javascript src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=it&tracking=1&thirdparty=1&always=1"></script><script>function enableGoogleAnalytics(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config',"UA-112742714-2");}
+function getCookiesAsObj(){return document.cookie.split(';').reduce((res,c)=>{const[key,val]=c.trim().split('=').map(decodeURIComponent)
+const allNumbers=str=>/^\d+$/.test(str);try{return Object.assign(res,{[key]:allNumbers(val)?val:JSON.parse(val)})}catch(e){return Object.assign(res,{[key]:val})}},{});}
+document.addEventListener("DOMContentLoaded",function(event){const cookies=getCookiesAsObj();console.log('DEBUG: DOM loaded.')
+if(cookies["cookiebar"]==='CookieAllowed'){enableGoogleAnalytics();console.log('DEBUG: ga enabled')}else{document.addEventListener('click',(event)=>{const cookies=getCookiesAsObj();console.log('DEBUG: click. Cookiebar is ',cookies["cookiebar"]==='CookieAllowed')
+if(cookies["cookiebar"]==='CookieAllowed'){this.enableGoogleAnalytics();}});}});</script></body></html>

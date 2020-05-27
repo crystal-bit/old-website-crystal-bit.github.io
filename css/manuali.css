@@ -1,23 +1,40 @@
 #manuals-list {
-    width: 94%;
     margin: auto;
 }
 
-.rounded-container {
-    /* padding: 0em; */
-    /* padding-bottom: 6px; */
-    /* margin: 0.5em; */
-    /* min-height: 20em; */
+#manuals-list .card{
+  background-color: var(--green-dark-1);
+  border-color: var(--green-dark-2);
+}
+
+.card {
+    height: 100%;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+a.btn {
+    padding: .4rem;
+    min-width: 120px;
+}
+
+/* .rounded-container {
+    padding: 0em;
+    padding-bottom: 6px;
+    margin: 0.5em;
+    min-height: 20em;
 }
 
 .rounded-container .rounded-container-overlap {
     height: 100%;
-    /* padding: 1em; */
+    padding: 1.2em;
 }
 
 .rounded-container-overlap .d-flex .flex-column {
     padding: 0em;
-}
+} */
 
 /* Remove green color from manual title. Make it white. */
 .rounded-container-overlap h3 > a {

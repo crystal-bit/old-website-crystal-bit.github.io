@@ -470,3 +470,8 @@ section#blog-list .post-entry {
 #post-container blockquote p:last-of-type {
   margin-bottom: 0px;
 }
+
+.badge-secondary {
+  background-color: var(--container-dark);
+  color: var(--gray)
+}
