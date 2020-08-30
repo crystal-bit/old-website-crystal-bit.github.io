@@ -16,12 +16,12 @@ Invalid operands 'Nil' and [...]
 appena avvicinando al mondo della programmazione.</p><p>L&rsquo;aiuto migliore che posso dare è spiegare cosa sia una <code>null instance</code> e
 spiegare quali strumenti esistono in Godot (ma non solo) per risolvere questi
 errori.</p><p>Una volta capito questo, affronterete questi errori in autonomia e con più
-consapevolezza.</p><h2 id=cosè-null>Cos'è &ldquo;null&rdquo;?</h2><p>Null è un tipo di dato che rappresenta un qualcosa di indefinito o inesistente;
+consapevolezza.</p><h2 id=cosè-null>Cos&rsquo;è &ldquo;null&rdquo;?</h2><p>Null è un tipo di dato che rappresenta un qualcosa di indefinito o inesistente;
 un tipo di dato su cui non sono definite proprietà e su cui non si possono
 effettuare operazioni.</p><p>Detto così non aiuta molto, quindi vediamo un esempio di GDScript.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> a <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>
 </code></pre></div><p>Questa scrittura salva il numero <code>10</code> (un <em>valore</em> di tipo <em>intero</em>, per essere
 precisi) all&rsquo;interno della <em>variabile</em> <code>a</code>.</p><p>Proviamo ora ad analizzare questo codice:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> x
-</code></pre></div><p>Questa istruzione GDScript è valida e viene eseguita senza problemi.<br>Cosa contiene ora <code>x</code>? Qual'è il suo valore?</p><p>Se state pensando <em>&ldquo;x non contiene niente&rdquo;</em>, la risposta è sbagliata.</p><p><code>x</code> contiene qualcosa e quel <em>qualcosa</em> viene interpretato come <code>null</code>.</p><p>Per convincervi provate ad eseguire questo codice:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> x
+</code></pre></div><p>Questa istruzione GDScript è valida e viene eseguita senza problemi.<br>Cosa contiene ora <code>x</code>? Qual&rsquo;è il suo valore?</p><p>Se state pensando <em>&ldquo;x non contiene niente&rdquo;</em>, la risposta è sbagliata.</p><p><code>x</code> contiene qualcosa e quel <em>qualcosa</em> viene interpretato come <code>null</code>.</p><p>Per convincervi provate ad eseguire questo codice:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>var</span> x
 <span style=color:#66d9ef>var</span> y <span style=color:#f92672>=</span> null
 
 <span style=color:#66d9ef>if</span> x <span style=color:#f92672>==</span> y:
@@ -40,17 +40,17 @@ aggiungiamo questo script a <code>Node2D</code>:</p><div class=highlight><pre st
 <span style=color:#66d9ef>func</span> _ready():
     <span style=color:#66d9ef>var</span> sprite <span style=color:#f92672>=</span> get_node(<span style=color:#e6db74>&#34;Sprit&#34;</span>) <span style=color:#75715e># oppure la notazione alternativa &#34;$Sprit&#34;</span>
     sprite<span style=color:#f92672>.</span>hide()
-</code></pre></div><p>Nello script c'è un errore di battitura: il parametro che passiamo alla funzione
+</code></pre></div><p>Nello script c&rsquo;è un errore di battitura: il parametro che passiamo alla funzione
 <code>get_node</code> dovrebbe essere <code>Sprite</code> e non <code>Sprit</code>.</p><p>Se eseguiamo comunque quel codice, si ottiene questo errore:</p><pre><code>Attempt to call function 'hide' in base 'null instance' on a null instance.
 </code></pre><p>Significa che abbiamo provato ad accedere ad una funzione chiamata
-<code>hide</code> da un oggetto <code>null</code>.</p><h2 id=risolvere-lerrore>Risolvere l&rsquo;errore</h2><p>Godot aiuta molto lo sviluppatore in questi casi.</p><p>Ogni volta che c'è un errore, aprirà l&rsquo;editor integrato mostrandovi il file che
+<code>hide</code> da un oggetto <code>null</code>.</p><h2 id=risolvere-lerrore>Risolvere l&rsquo;errore</h2><p>Godot aiuta molto lo sviluppatore in questi casi.</p><p>Ogni volta che c&rsquo;è un errore, aprirà l&rsquo;editor integrato mostrandovi il file che
 contiene l&rsquo;errore. In questo modo non dobbiamo cercare all&rsquo;interno di decine di
 script prima di trovare l&rsquo;errore.</p><p><img src=./img/debugger-overview.png alt="Debugger overview"></p><p>Focalizzatevi sul codice. Vedete quella piccola freccia verde nella parte
 sinistra dell&rsquo;editor?</p><p><img src=./img/debugger.png alt=Debugger></p><p>Quella freccia sta ad indicare che Godot ha fermato l&rsquo;esecuzione del gioco in
 quel punto.</p><p>Ora per capire ancora più a fondo cosa stia accadendo, guardate
 nella sezione <em>debugger</em> che si trova nella parte inferiore di Godot.</p><p><img src=./img/errore.png alt=errore></p><p>Qui troviamo una scritta rossa con il <strong>messaggio di errore</strong>. Questo è quello
 che ci fornisce informazioni (o indizi, se preferite) su dove andare a cercare
-il nostro problema.</p><p>Prima di tornare sul codice, guardate la parte destra del debugger: c'è una
+il nostro problema.</p><p>Prima di tornare sul codice, guardate la parte destra del debugger: c&rsquo;è una
 lista di variabili con i rispettivi valori.</p><p><img src=img/errore-highlight.png alt="Errore highlight"></p><p>In questo semplice esempio abbiamo solo una variabile <code>sprite</code> (freccia 1)
 con valore <code>null</code> (freccia 2).</p><p>Ora possiamo intuire che deve esserci stato un errore
 nell&rsquo;inizializzazione di <code>sprite</code>. Riprendiamo il codice e correggiamo
@@ -58,7 +58,7 @@ la riga 5 scrivendo:</p><div class=highlight><pre style=color:#f8f8f2;background
 </code></pre></div><p>Eseguendo di nuovo il codice, il gioco partirà senza errori.</p><h2 id=conclusioni>Conclusioni</h2><p>Gli errori dovuti a valori null possono avvenire per molti motivi, non
 soltanto quando si sbaglia a scrivere il nome di un nodo.
 Ma l&rsquo;approccio per risolverli è sempre lo stesso.</p><p>Il debugger vi offrirà sempre utili indizi quindi prendete confidenza con
-questo strumento il più presto possibile.</p><p>Se volete approfondire questa parte vi consiglio di:</p><ol><li>Leggere cos'è il debugging <a href=https://it.wikipedia.org/wiki/Debugging>su Wikipedia</a></li><li>Studiare e sperimentare con i <strong>breakpoint</strong> seguendo <a href=https://docs.godotengine.org/en/stable/tutorials/debug/overview_of_debugging_tools.html>la
+questo strumento il più presto possibile.</p><p>Se volete approfondire questa parte vi consiglio di:</p><ol><li>Leggere cos&rsquo;è il debugging <a href=https://it.wikipedia.org/wiki/Debugging>su Wikipedia</a></li><li>Studiare e sperimentare con i <strong>breakpoint</strong> seguendo <a href=https://docs.godotengine.org/en/stable/tutorials/debug/overview_of_debugging_tools.html>la
 documentazione
 ufficiale di Godot</a></li></ol><p>Spero che questa guida vi sia stata di aiuto e vi abbia dato spunti per
 studiare e migliorare come sviluppatori di videogiochi.</p><p>Buon gamedev ed alla prossima.</p></div></div></div><hr><div class="card rounded-container my-3"><div id=post-container class="card-body rounded-container-overlap"><h5>SUPPORTAMI</h5><p>Questo sito web è privo di pubblicità ed i contenuti vengono rilasciati con licenze libere come CC-BY-SA e GPL.</p><p>Se i contenuti ti piacciono e ti sono stati utili, considera
