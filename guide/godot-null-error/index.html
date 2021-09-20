@@ -67,7 +67,7 @@ anim-left" href=/supporter/> SUPPORTER </a>
 <hr>
 <div id=post-body class=card-text>
 <p>Ho ricevuto spesso richieste di aiuto per problemi con GDScript del tipo:</p>
-<pre><code>Invalid set index 'position' (on base: 'null instance') [...]
+<pre tabindex=0><code>Invalid set index 'position' (on base: 'null instance') [...]
 
 Invalid operands 'Nil' and [...]
 </code></pre><p>Chi si blocca di fronte a questo genere di problemi, probabilmente si sta
@@ -125,7 +125,7 @@ aggiungiamo questo script a <code>Node2D</code>:</p>
 </code></pre></div><p>Nello script c&rsquo;è un errore di battitura: il parametro che passiamo alla funzione
 <code>get_node</code> dovrebbe essere <code>Sprite</code> e non <code>Sprit</code>.</p>
 <p>Se eseguiamo comunque quel codice, si ottiene questo errore:</p>
-<pre><code>Attempt to call function 'hide' in base 'null instance' on a null instance.
+<pre tabindex=0><code>Attempt to call function 'hide' in base 'null instance' on a null instance.
 </code></pre><p>Significa che abbiamo provato ad accedere ad una funzione chiamata
 <code>hide</code> da un oggetto <code>null</code>.</p>
 <h2 id=risolvere-lerrore>Risolvere l&rsquo;errore</h2>
