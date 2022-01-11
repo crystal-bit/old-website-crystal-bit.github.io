@@ -1,13 +1,14 @@
 
 :root {
   --green: #9ff1e0;
+  --green-a05: rgba(159, 241, 224, 0.2);
   --green-dark:rgb(30, 40, 41);
   --green-dark-1: rgb(48, 58, 59);
   --green-dark-2: rgb(75, 85, 96);
   --container-dark: rgb(38, 48, 49);
 
   /* Accent color */
-  --light-green: #7fdabd;
+  --light-green: rgb(127, 218, 189);
 
   /* Usefule for normal text, muted/disabled text */
   --gray: rgb(148, 148, 148);
@@ -360,11 +361,6 @@ img.small-pixel-art-icon {
   }
 }
 
-#yt-video-embed {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 /*
  * Cover
  */
@@ -374,7 +370,6 @@ img.small-pixel-art-icon {
 }
 
 .cover .headline {
-  min-height: 320px;
   background-color: var(--container-dark);
   border-radius: 0.4em;
   padding: 0em;
