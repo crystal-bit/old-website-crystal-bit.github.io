@@ -119,6 +119,11 @@ a.disabled::before {
 
 iframe {
   padding: 1em;
+  border-radius: 0.35em;
+}
+
+#twitch-embed iframe {
+  border-radius: 1.25em!important;
 }
 
 /*
@@ -293,8 +298,12 @@ img.small-pixel-art-icon {
   image-rendering: pixelated; /* fallback */
 }
 
-.row.tutorial {
+.row.tutorial .row.games . {
   margin-top: 4em;
+}
+
+div.games img{
+  border-radius: 0.4em;
 }
 
 .row.blog {
