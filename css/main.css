@@ -452,12 +452,16 @@ section#blog-list .post-entry {
   margin-bottom: 0.6em;
 }
 
-#post-container img {
+#post-container img, #post-container video {
   display: block;
-  max-width: 100%;
+  max-width: 80%;
   margin: auto;
-  padding: 1rem;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  border-radius: .4em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px 1px;
 }
+
 
 #post-container blockquote {
   background-color: rgba(0, 0, 0, 0.25);
