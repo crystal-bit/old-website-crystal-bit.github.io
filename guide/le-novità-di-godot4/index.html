@@ -61,6 +61,8 @@ anim-left" href=/supporter/> SUPPORTER </a>
 <p class="text-right small">
 <span class=font-weight-light>Pubblicazione:</span>
 28/2/2022
+<br>
+<span class=font-weight-light>Ultimo aggiornamento:</span> 28/2/2022
 </p>
 </div>
 </div>
@@ -94,7 +96,8 @@ sconsigliato utilizzare Godot 4 nella maggior parte dei casi.</p>
 <li><strong>Non esiste una guida ufficiale per il porting</strong> (anche perché
 l’engine è ancora in sviluppo).
 <ul>
-<li>Potrebbe esserne rilasciata una ufficiale in futuro (<a href=https://github.com/godotengine/godot-docs/issues/4960>godot-docs/issues/4960</a>).</li>
+<li>Potrebbe esserne rilasciata una ufficiale in futuro
+(<a href=https://github.com/godotengine/godot-docs/issues/4960>godot-docs/issues/4960</a>).</li>
 <li>Esistono guide non ufficiali come: <a href=https://gist.github.com/WolfgangSenff/168cb0cbd486c8c9cd507f232165b976>Unofficial Godot 4.0 Migration/Upgrade
 guide</a></li>
 </ul>
@@ -108,7 +111,7 @@ ufficiale</a>.</li>
 </ul>
 <h2 id=renderer-vulkanopengl>Renderer Vulkan/OpenGL</h2>
 <p>Una delle principali novità di Godot 4 è la riscrittura del motore grafico.
-Le librerie utilizzate saranno <strong>Vulkan</strong> ed OpenGL 3.0.</p>
+Le librerie utilizzate saranno <strong>Vulkan</strong> ed OpenGL ES 3.0.</p>
 <p>Vulkan è uno standard (open) per computer grafica moderna. Rispetto ad OpenGL,
 offre più controllo sulla GPU e quindi migliori performance.</p>
 <p><img src=https://godotengine.org/storage/app/uploads/public/5da/233/dd4/5da233dd4d90a731626797.gif alt></p>
@@ -117,8 +120,8 @@ offre più controllo sulla GPU e quindi migliori performance.</p>
 una grafica più avanzata, il secondo per applicazioni più semplici.</p>
 <p><img src=img/godot4-new-project.png alt></p>
 <p>Tra le novità troviamo la compilazione degli shader in multi-threading e la
-possibilità di importare shader GLSL4.50. Notizia che farà felice gli
-utilizzatori di Shadertoy!</p>
+possibilità di importare shader GLSL4.50 (con estensioni Vulkan). Notizia che
+farà felice gli utilizzatori di Shadertoy!</p>
 <p>Inoltre, a differenza di Godot 3, gli shader sono compilati (e memorizzati in
 cache) al caricamento. Questo meccanismo riduerrà lo stutter nelle prime fasi di
 avvio di una scena di gioco. Problema che in passato era comune sia nei giochi
