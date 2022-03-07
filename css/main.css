@@ -454,7 +454,7 @@ section#blog-list .post-entry {
 
 #post-container img, #post-container video {
   display: block;
-  max-width: 80%;
+  max-width: 85%;
   margin: auto;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
