@@ -1,302 +1,75 @@
-<!doctype html><html lang=en>
-<head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112742714-2"></script>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta property="og:site_name" content="Crystal Bit">
-<title> Le novità di Godot 4 </title>
-<meta property="og:image" itemprop=image content="/img/logo.png">
-<meta name=description content="Di recente sta crescendo l’interesse verso Godot Engine 4. Ho raccolto qui tutte
-le informazioni più …">
-<meta property="og:title" content="Le novità di Godot 4">
-<meta property="og:url" content="https://crystal-bit.github.io/guide/le-novit%C3%A0-di-godot4/">
-<meta property="og:description" content="Di recente sta crescendo l’interesse verso Godot Engine 4. Ho raccolto qui tutte
-le informazioni più …">
-<meta property="og:type" content="article">
-<link href="https://fonts.googleapis.com/css?family=Quantico" rel=stylesheet>
-<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel=stylesheet>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&display=swap" rel=stylesheet>
-<link rel="shortcut icon" type=image/x-icon href=/img/logo-transparent.png>
-<link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css integrity=sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4 crossorigin=anonymous>
-<link rel=stylesheet href=https://use.fontawesome.com/releases/v5.2.0/css/all.css integrity=sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ crossorigin=anonymous>
-<link rel=stylesheet href=/css/main.css>
-</head>
-<body data-gr-c-s-loaded=true>
-<script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous defer></script>
+<!doctype html><html lang=en><head><script async src="https://www.googletagmanager.com/gtag/js?id=UA-112742714-2"></script><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta property="og:site_name" content="Crystal Bit"><title>Le novità di Godot 4</title><meta property="og:image" itemprop=image content="/img/logo.png"><meta name=description content="Di recente sta crescendo l’interesse verso Godot Engine 4. Ho raccolto qui tutte
+le informazioni più …"><meta property="og:title" content="Le novità di Godot 4"><meta property="og:url" content="https://crystal-bit.github.io/guide/le-novit%C3%A0-di-godot4/"><meta property="og:description" content="Di recente sta crescendo l’interesse verso Godot Engine 4. Ho raccolto qui tutte
+le informazioni più …"><meta property="og:type" content="article"><link href="https://fonts.googleapis.com/css?family=Quantico" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel=stylesheet><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i&display=swap" rel=stylesheet><link rel="shortcut icon" type=image/x-icon href=/img/logo-transparent.png><link rel=stylesheet href=https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css integrity=sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4 crossorigin=anonymous><link rel=stylesheet href=https://use.fontawesome.com/releases/v5.2.0/css/all.css integrity=sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ crossorigin=anonymous><link rel=stylesheet href=/css/main.css></head><body data-gr-c-s-loaded=true><script src=https://code.jquery.com/jquery-3.3.1.slim.min.js integrity=sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo crossorigin=anonymous defer></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js integrity=sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ crossorigin=anonymous defer></script>
 <script src=https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js integrity=sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm crossorigin=anonymous defer></script>
-<script src=https://use.fontawesome.com/03364e4af9.js defer></script>
-<div class="body-container d-flex h-100 py-3 mx-auto flex-column">
-<header class=masthead>
-<div class=inner>
-<h3 class=masthead-brand>
-<a id=main-logo-link href=/>
-<img id=logo src=/img/logo-transparent.png class=img-fluid alt>
-<span class=anim-left style=font-size:.8em>CRYSTAL BIT</span>
-</a>
-</h3>
-<nav class="nav nav-masthead justify-content-center">
-<a class="nav-link
-anim-left" href=/about/> ABOUT </a>
+<script src=https://use.fontawesome.com/03364e4af9.js defer></script><div class="body-container d-flex h-100 py-3 mx-auto flex-column"><header class=masthead><div class=inner><h3 class=masthead-brand><a id=main-logo-link href=/><img id=logo src=/img/logo-transparent.png class=img-fluid alt>
+<span class=anim-left style=font-size:.8em>CRYSTAL BIT</span></a></h3><nav class="nav nav-masthead justify-content-center"><a class="nav-link
+anim-left" href=/about/>ABOUT</a>
 <a class="nav-link
 anim-left
-active" href=/guide/> GUIDE </a>
+active" href=/guide/>GUIDE</a>
 <a class="nav-link
-anim-left" href=/blog/> BLOG </a>
+anim-left" href=/blog/>BLOG</a>
 <a class="nav-link
-anim-left" href=/supporter/> SUPPORTER </a>
-</nav>
-</div>
-</header>
-<div class=main-container>
-<div class="card rounded-container my-3">
-<div id=post-container class="card-body rounded-container-overlap">
-<h2 class=card-title> Le novità di Godot 4 </h2>
-<div>
-<div class=row style=padding-top:.5em>
-<div class=col>
-<span class="badge badge-secondary">Godot Engine 4</span>
-</div>
-<div class=col>
-<p class="text-right small">
-<span class=font-weight-light>Pubblicazione:</span>
-28/2/2022
-<br>
-<span class=font-weight-light>Ultimo aggiornamento:</span> 28/2/2022
-</p>
-</div>
-</div>
-</div>
-<hr>
-<div id=post-body class=card-text>
-<p>Di recente sta crescendo l’interesse verso Godot Engine 4. Ho raccolto qui tutte
-le informazioni più utili per chi sta valutando l&rsquo;utilizzo di questo engine open source.</p>
-<p><img src=img/godot4-editor.png alt></p>
-<p><strong>⚠️ Avvertimento</strong>: se avete un progetto in sviluppo con Godot 3 allora
+anim-left" href=/supporter/>SUPPORTER</a></nav></div></header><div class=main-container><div class="card rounded-container my-3"><div id=post-container class="card-body rounded-container-overlap"><h2 class=card-title>Le novità di Godot 4</h2><div><div class=row style=padding-top:.5em><div class=col><span class="badge badge-secondary">Godot Engine 4</span></div><div class=col><p class="text-right small"><span class=font-weight-light>Pubblicazione:</span>
+28/2/2022<br><span class=font-weight-light>Ultimo aggiornamento:</span> 1/6/2022</p></div></div></div><hr><div id=post-body class=card-text><p>Di recente sta crescendo l’interesse verso Godot Engine 4. Ho raccolto qui tutte
+le informazioni più utili per chi sta valutando l&rsquo;utilizzo di questo engine open source.</p><p><img src=img/godot4-editor.png alt></p><p><strong>⚠️ Avvertimento</strong>: se avete un progetto in sviluppo con Godot 3 allora
 continuate su quella versione, a meno che non abbiate un valido motivo per fare
-l’upgrade. Godot 4 non è ancora pronto per l&rsquo;utilizzo in produzione.</p>
-<h2 id=qual-è-lultima-versione-disponibile>Qual è l&rsquo;ultima versione disponibile?</h2>
-<p><img src=img/download-server.png alt></p>
-<p>L&rsquo;ultima versione disponibile è <strong>Godot Engine 4 alpha3</strong> (al tempo della scrittura di
-questa guida), rilasciata durante Febbraio 2022.</p>
-<p>Potete trovare le build ufficiali a questo link:
-<a href=https://downloads.tuxfamily.org/godotengine/4.0/>downloads.tuxfamily.org/godotengine/4.0/</a></p>
-<p>Da qui in avanti ci riferiremo a <em>Godot 4 alpha 3</em> chiamandolo semplicemente <em>Godot
-4</em> per brevità.</p>
-<p>Con <em>Godot 3</em> ci si riferirà invece all&rsquo;ultima versione stabile di Godot 3, che
-al tempo della scrittura è Godot 3.4.3.</p>
-<h2 id=stabilità-dellengine>Stabilità dell’engine</h2>
-<p><img src=https://godotengine.org/storage/app/uploads/public/5e3/0a6/083/5e30a6083a68f545209322.png alt></p>
-<p><strong>Godot 4 è ancora in versione alpha, quindi è altamente instabile</strong>.</p>
-<p>Sia il codice che la UI potrebbero cambiare nelle prossime settimane, è quindi
-sconsigliato utilizzare Godot 4 nella maggior parte dei casi.</p>
-<p><img src=img/godot-bugs.png alt></p>
-<p>Attualmente:</p>
-<ul>
-<li><strong>Non esiste una guida ufficiale per il porting</strong> (anche perché
-l’engine è ancora in sviluppo).
-<ul>
-<li>Potrebbe esserne rilasciata una ufficiale in futuro
-(<a href=https://github.com/godotengine/godot-docs/issues/4960>godot-docs/issues/4960</a>).</li>
-<li>Esistono guide non ufficiali come: <a href=https://gist.github.com/WolfgangSenff/168cb0cbd486c8c9cd507f232165b976>Unofficial Godot 4.0 Migration/Upgrade
-guide</a></li>
-</ul>
-</li>
-<li><strong>Non ci sono tool automatici per l’upgrade</strong> da un progetto v3 a v4.
-<ul>
-<li><a href=https://github.com/godotengine/godot/pull/51950>Pull Request (WIP) per implementare un convertitore
-ufficiale</a>.</li>
-</ul>
-</li>
-</ul>
-<h2 id=renderer-vulkanopengl>Renderer Vulkan/OpenGL</h2>
-<p>Una delle principali novità di Godot 4 è la riscrittura del motore grafico.
-Le librerie utilizzate saranno <strong>Vulkan</strong> ed OpenGL ES 3.0.</p>
-<p>Vulkan è uno standard (open) per computer grafica moderna. Rispetto ad OpenGL,
-offre più controllo sulla GPU e quindi migliori performance.</p>
-<p><img src=https://godotengine.org/storage/app/uploads/public/5da/233/dd4/5da233dd4d90a731626797.gif alt></p>
-<h3 id=cambiamenti-nel-nuovo-renderer>Cambiamenti nel nuovo renderer</h3>
-<p>Il renderer viene offerto nelle modalità <code>Clustered</code> e <code>Mobile</code>. Il primo per
-una grafica più avanzata, il secondo per applicazioni più semplici.</p>
-<p><img src=img/godot4-new-project.png alt></p>
-<p>Tra le novità troviamo la compilazione degli shader in multi-threading e la
+l’upgrade. Godot 4 non è ancora pronto per l&rsquo;utilizzo in produzione.</p><h2 id=qual-è-lultima-versione-disponibile>Qual è l&rsquo;ultima versione disponibile?</h2><p><img src=img/download-server.png alt></p><p>L&rsquo;ultima versione disponibile è <strong>Godot Engine 4 alpha8</strong> (al tempo della scrittura di
+questa guida).</p><p>Potete trovare le build ufficiali a questo link:
+<a href=https://downloads.tuxfamily.org/godotengine/4.0/>downloads.tuxfamily.org/godotengine/4.0/</a></p><p>Da qui in avanti ci riferiremo a <em>Godot 4 alpha</em> chiamandolo semplicemente <em>Godot
+4</em> per brevità.</p><p>Con <em>Godot 3</em> ci si riferirà invece all&rsquo;ultima versione stabile di Godot 3, che
+al tempo della scrittura è Godot 3.4.4.</p><h2 id=stabilità-dellengine>Stabilità dell’engine</h2><p><img src=https://godotengine.org/storage/app/uploads/public/5e3/0a6/083/5e30a6083a68f545209322.png alt></p><p><strong>Godot 4 è ancora in versione alpha, quindi è altamente instabile</strong>.</p><p>Sia il codice che la UI potrebbero cambiare nelle prossime settimane, è quindi
+sconsigliato utilizzare Godot 4 nella maggior parte dei casi.</p><p><img src=img/godot-bugs.png alt></p><p>Attualmente:</p><ul><li><strong>Non esiste una guida ufficiale per il porting</strong> (anche perché
+l’engine è ancora in sviluppo).<ul><li>Potrebbe esserne rilasciata una ufficiale in futuro
+(<a href=https://github.com/godotengine/godot-docs/issues/4960>godot-docs/issues/4960</a>).</li><li>Esistono guide non ufficiali come: <a href=https://gist.github.com/WolfgangSenff/168cb0cbd486c8c9cd507f232165b976>Unofficial Godot 4.0 Migration/Upgrade
+guide</a></li></ul></li><li><strong>Non ci sono tool automatici per l’upgrade</strong> da un progetto v3 a v4.<ul><li><a href=https://github.com/godotengine/godot/pull/51950>Pull Request (WIP) per implementare un convertitore
+ufficiale</a>.</li></ul></li></ul><h3 id=un-tutorial-per-la-versione-alpha>Un tutorial per la versione alpha</h3><p>Siete proprio curiosi di cominciare a sviluppare con Godot e non volete aspettare la release stabile?</p><p>Ho fatto un video tutorial completo che trovate su YouTube!</p><div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden><iframe src=https://www.youtube.com/embed/uRzloUV0v0Y style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe></div><h2 id=renderer-vulkanopengl>Renderer Vulkan/OpenGL</h2><p>Una delle principali novità di Godot 4 è la riscrittura del motore grafico.
+Le librerie utilizzate saranno <strong>Vulkan</strong> ed OpenGL ES 3.0.</p><p>Vulkan è uno standard (open) per computer grafica moderna. Rispetto ad OpenGL,
+offre più controllo sulla GPU e quindi migliori performance.</p><p><img src=https://godotengine.org/storage/app/uploads/public/5da/233/dd4/5da233dd4d90a731626797.gif alt></p><h3 id=cambiamenti-nel-nuovo-renderer>Cambiamenti nel nuovo renderer</h3><p>Il renderer viene offerto nelle modalità <code>Clustered</code> e <code>Mobile</code>. Il primo per
+una grafica più avanzata, il secondo per applicazioni più semplici.</p><p><img src=img/godot4-new-project.png alt></p><p>Tra le novità troviamo la compilazione degli shader in multi-threading e la
 possibilità di importare shader GLSL4.50 (con estensioni Vulkan). Notizia che
-farà felice gli utilizzatori di Shadertoy!</p>
-<p>Inoltre, a differenza di Godot 3, gli shader sono compilati (e memorizzati in
+farà felice gli utilizzatori di Shadertoy!</p><p>Inoltre, a differenza di Godot 3, gli shader sono compilati (e memorizzati in
 cache) al caricamento. Questo meccanismo riduerrà lo stutter nelle prime fasi di
 avvio di una scena di gioco. Problema che in passato era comune sia nei giochi
-2D che 3D.</p>
-<video controls autoplay muted loop>
-<source src=https://godotengine.org/storage/app/media/antialias.mp4 type=video/mp4>
-Your browser does not support the video tag.
-</video>
-<p>Il nuovo renderer migliora:</p>
-<ul>
-<li>Subsurface scattering</li>
-<li>Screen space reflection</li>
-<li>Screen space ambient occlusion (SSAO)</li>
-<li>MSAA, FXAA e Specular anti-aliasing</li>
-<li>Glow/bloom</li>
-<li>Depth of field</li>
-</ul>
-<p><img src=https://godotengine.org/storage/app/uploads/public/5db/e1d/ed1/5dbe1ded186e6248184679.gif alt></p>
-<p>Tra le nuove funzionalità introdotte troviamo:</p>
-<ul>
-<li>Global Illumination (grazie al contributo di Matias Goldberg di Ogre3D)
-<ul>
-<li>con supporto ad oggetti dinamici</li>
-<li>i cambiamenti di luce, posizione e parametri avranno impatto immediato sulla scena</li>
-</ul>
-</li>
-<li>Soft shadows</li>
-<li>Decals</li>
-<li>Light projectors</li>
-</ul>
-<p>Ci sono state anche alcune modifiche nella nomenclatura:</p>
-<ul>
-<li>i nodi 3D avranno il suffisso &ldquo;3D&rdquo; alla fine del nome, avendo consistenza con
-quanto c&rsquo;è già nei nodi 2D</li>
-<li>la classe <code>SpatialMaterial</code> è stata rinominata in <code>StandardMaterial</code></li>
-<li>il nodo <code>Spatial</code> è stato rinominato in <code>Node3D</code>, per maggior chiarezza</li>
-</ul>
-<h3 id=limitazioni-attuali>Limitazioni attuali</h3>
-<p>Attualmente ci sono diverse limitazioni con Godot 4:</p>
-<ul>
-<li>non è possibile esportare progetti Vulkan in HTML5.</li>
-<li>potete eseguire Godot 4 solamente se avete una scheda video che offre driver
-Vulkan.</li>
-<li>non è attualmente implementato il renderer OpenGL 3.0, ma è in sviluppo</li>
-</ul>
-<h3 id=altre-info-sul-renderer>Altre info sul renderer</h3>
-<p>Esiste una serie di blog post ufficiali per approfondire il lavoro fatto sul
+2D che 3D.</p><video controls autoplay muted loop>
+<source src=https://godotengine.org/storage/app/media/antialias.mp4 type=video/mp4>Your browser does not support the video tag.</video><p>Il nuovo renderer migliora:</p><ul><li>Subsurface scattering</li><li>Screen space reflection</li><li>Screen space ambient occlusion (SSAO)</li><li>MSAA, FXAA e Specular anti-aliasing</li><li>Glow/bloom</li><li>Depth of field</li></ul><p><img src=https://godotengine.org/storage/app/uploads/public/5db/e1d/ed1/5dbe1ded186e6248184679.gif alt></p><p>Tra le nuove funzionalità introdotte troviamo:</p><ul><li>Global Illumination (grazie al contributo di Matias Goldberg di Ogre3D)<ul><li>con supporto ad oggetti dinamici</li><li>i cambiamenti di luce, posizione e parametri avranno impatto immediato sulla scena</li></ul></li><li>Soft shadows</li><li>Decals</li><li>Light projectors</li></ul><p>Ci sono state anche alcune modifiche nella nomenclatura:</p><ul><li>i nodi 3D avranno il suffisso &ldquo;3D&rdquo; alla fine del nome, avendo consistenza con
+quanto c&rsquo;è già nei nodi 2D</li><li>la classe <code>SpatialMaterial</code> è stata rinominata in <code>StandardMaterial</code></li><li>il nodo <code>Spatial</code> è stato rinominato in <code>Node3D</code>, per maggior chiarezza</li></ul><h3 id=limitazioni-attuali>Limitazioni attuali</h3><p>Attualmente ci sono diverse limitazioni con Godot 4:</p><ul><li>non è possibile esportare progetti Vulkan in HTML5.</li><li>potete eseguire Godot 4 solamente se avete una scheda video che offre driver
+Vulkan.</li><li>non è attualmente implementato il renderer OpenGL 3.0, ma è in sviluppo</li></ul><h3 id=altre-info-sul-renderer>Altre info sul renderer</h3><p>Esiste una serie di blog post ufficiali per approfondire il lavoro fatto sul
 motore di rendering, lo trovate su
-<a href=https://godotengine.org/article/vulkan-progress-report-1>godotengine.org/article/vulkan-progress-report-1</a>.</p>
-<h2 id=documentazione>Documentazione</h2>
-<ul>
-<li>La documentazione per Godot 4 la potete trovare selezionando la versione
+<a href=https://godotengine.org/article/vulkan-progress-report-1>godotengine.org/article/vulkan-progress-report-1</a>.</p><h2 id=documentazione>Documentazione</h2><ul><li>La documentazione per Godot 4 la potete trovare selezionando la versione
 “latest” dal sito ufficiale. Il link esatto è questo
-<a href=https://docs.godotengine.org/en/latest/>https://docs.godotengine.org/en/latest/</a></li>
-<li><strong>La documentazione contiene molte pagine che ancora non sono state aggiornate
-alla versione 4.</strong></li>
-</ul>
-<p><strong>&ldquo;Come faccio a sapere se la documentazione è aggiornata?"</strong><br>
-Guardate in alto a destra in qualsiasi pagina della documentazione: cliccate sul
-pulsante “Edit on GitHub” e vi si aprirà il codice sorgente della pagina di<br>
-documentazione.
+<a href=https://docs.godotengine.org/en/latest/>https://docs.godotengine.org/en/latest/</a></li><li><strong>La documentazione contiene molte pagine che ancora non sono state aggiornate
+alla versione 4.</strong></li></ul><p><strong>&ldquo;Come faccio a sapere se la documentazione è aggiornata?&rdquo;</strong><br>Guardate in alto a destra in qualsiasi pagina della documentazione: cliccate sul
+pulsante “Edit on GitHub” e vi si aprirà il codice sorgente della pagina di<br>documentazione.
 Cliccate su “History” (sempre in alto a destra) e troverete la lista delle
-modifiche che sono state fatte su quella pagina.<br>
-Leggendo la descrizione del commit e la loro data, potrete intuire se la pagina
-è aggiornata o meno.</p>
-<h2 id=-gdscript>📝 GDScript</h2>
-<blockquote>
-<p>🔨 Questa sezione è ancora in lavorazione.</p>
-</blockquote>
-<p>GDScript è il principale linguaggio di scripting di Godot Engine, la sua sintassi è simile a quella di Python e Lua.</p>
-<p>In Godot 4 è stato migliorato notevolmente, senza stravolgere la sintassi per
+modifiche che sono state fatte su quella pagina.<br>Leggendo la descrizione del commit e la loro data, potrete intuire se la pagina
+è aggiornata o meno.</p><h2 id=-gdscript>📝 GDScript</h2><blockquote><p>🔨 Questa sezione è ancora in lavorazione.</p></blockquote><p>GDScript è il principale linguaggio di scripting di Godot Engine, la sua sintassi è simile a quella di Python e Lua.</p><p>In Godot 4 è stato migliorato notevolmente, senza stravolgere la sintassi per
 l&rsquo;utente: chi ha confidenza con Godot 3, si sentirà a suo agio nell&rsquo;utilizzare
-Godot 4.</p>
-<p>Potete seguire tutte le novità leggendo
+Godot 4.</p><p>Potete seguire tutte le novità leggendo
 <a href=https://godotengine.org/article/gdscript-progress-report-writing-tokenizer>questi progress report</a>
-ufficiali.</p>
-<p>In breve:</p>
-<ul>
-<li>lo <em>static typing</em>, quando presente, migliorerà le performance di esecuzione
-(<a href=https://youtu.be/AWThTxbHibs>ne ho parlato in questo video</a>)</li>
-<li>la parola chiave <code>await</code> rimpiazza <code>yield</code></li>
-<li>aggiunta la parola chiave <code>super</code> al posto di <code>.</code></li>
-<li>i tipi enumerativi potranno essere usati come tipo di una variabile (in passato era già possibile farne l&rsquo;export)</li>
-<li>sono stati aggiunti gli array tipizzati <code>var my_array: Array[int] = [1, 2, 3]</code></li>
-<li>sono state aggiunte le funzioni lambda, e le funzioni sono diventate un <em>&ldquo;first class citizen&rdquo;</em> grazie alla classe <code>Callable</code>.</li>
-</ul>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=color:#66d9ef>func</span> _ready():
-  <span style=color:#66d9ef>var</span> my_lambda <span style=color:#f92672>=</span> <span style=color:#66d9ef>func</span>(x): 
-      print(x)
-  <span style=color:#75715e># my_lamba è di tipo Callable</span>
-  my_lambda<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;hello&#34;</span>)
-</code></pre></div><ul>
-<li>grazie ai <code>Callable</code>, Godot permette un approccio funzionale alla
+ufficiali.</p><p>In breve:</p><ul><li>lo <em>static typing</em>, quando presente, migliorerà le performance di esecuzione
+(<a href=https://youtu.be/AWThTxbHibs>ne ho parlato in questo video</a>)</li><li>la parola chiave <code>await</code> rimpiazza <code>yield</code></li><li>aggiunta la parola chiave <code>super</code> al posto di <code>.</code></li><li>i tipi enumerativi potranno essere usati come tipo di una variabile (in passato era già possibile farne l&rsquo;export)</li><li>sono stati aggiunti gli array tipizzati <code>var my_array: Array[int] = [1, 2, 3]</code></li><li>sono state aggiunte le funzioni lambda, e le funzioni sono diventate un <em>&ldquo;first class citizen&rdquo;</em> grazie alla classe <code>Callable</code>.</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gd data-lang=gd><span style=display:flex><span><span style=color:#66d9ef>func</span> _ready():
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>var</span> my_lambda <span style=color:#f92672>=</span> <span style=color:#66d9ef>func</span>(x): 
+</span></span><span style=display:flex><span>      print(x)
+</span></span><span style=display:flex><span>  <span style=color:#75715e># my_lamba è di tipo Callable</span>
+</span></span><span style=display:flex><span>  my_lambda<span style=color:#f92672>.</span>call(<span style=color:#e6db74>&#34;hello&#34;</span>)
+</span></span></code></pre></div><ul><li>grazie ai <code>Callable</code>, Godot permette un approccio funzionale alla
 programmazione. Se volete approfondire vi consiglio questo talk di Geroge
 Marques (principale maintainer di GDScript): <a href=https://youtu.be/uCnZ0aL0OwQ>Functional programming and
-applications on GDScript</a></li>
-<li>è possibile usare l&rsquo;operatore <code>match</code> per eseguire rami di codice in base
-al tipo del parametro</li>
-<li>è stato aggiunto un sistema di annotazioni, che si distinguono dal simbolo
-<code>@</code>. Ad esempio: <code>@master</code>, <code>@puppet</code>, <code>@remote</code></li>
-<li>anche gli export sono annotazioni: <code>@export var my_number: int</code></li>
-<li><code>setget</code> è stato rimpiazzato dalle <em>properties</em>
-<blockquote>
-<p>unlike setget properties always call their setter/getter even inside the
+applications on GDScript</a></li><li>è possibile usare l&rsquo;operatore <code>match</code> per eseguire rami di codice in base
+al tipo del parametro</li><li>è stato aggiunto un sistema di annotazioni, che si distinguono dal simbolo
+<code>@</code>. Ad esempio: <code>@master</code>, <code>@puppet</code>, <code>@remote</code></li><li>anche gli export sono annotazioni: <code>@export var my_number: int</code></li><li><code>setget</code> è stato rimpiazzato dalle <em>properties</em><blockquote><p>unlike setget properties always call their setter/getter even inside the
 same class. This gives users a consistent behavior which won&rsquo;t cause
-confusion or lead to potential mistakes during a refactor.</p>
-</blockquote>
-</li>
-<li>ora è possibile generare automaticamente documentazione navigabile per i
-propri nodi</li>
-</ul>
-<h2 id=c--mono>C# / Mono</h2>
-<p>La versione finale di Godot 4 supporterà lo scripting anche con C#.</p>
-<p>Attualmente però non esistono build con il supporto a Mono.</p>
-<h2 id=-altre-novità>🆕 Altre Novità</h2>
-<p>Questa guida non è sufficiente? Se volete una lettura approfondita e completa,
+confusion or lead to potential mistakes during a refactor.</p></blockquote></li><li>ora è possibile generare automaticamente documentazione navigabile per i
+propri nodi</li></ul><h2 id=c--mono>C# / Mono</h2><p>La versione finale di Godot 4 supporterà lo scripting anche con C#.</p><p>Attualmente però non esistono build con il supporto a Mono.</p><h2 id=giochi-pixel-art>Giochi Pixel Art</h2><p>Per i giochi pixel art sono cambiate un paio di cose:</p><ol><li>impostazione filtro texture</li><li>aggiunta dei classi specifiche per numeri interi: <code>Vector2i</code>, <code>Rect2i</code>, <code>Vector3i</code>.</li></ol><p>Per il filtro delle texture è ora possibile specificare i filtri su ogni Nodo di
+tipo CanvasItem. I nodi figli erediteranno l&rsquo;impostazione del nodo padre.</p><p>Inoltre se sapete già che volete utilizzare un certo tipo di filtro per tutte le scene, potete selezionare direttamente l&rsquo;opzione dai Project Settings come mostrato in <a href="https://youtu.be/uRzloUV0v0Y?t=587">questa parte del tutorial</a>.</p><p><img src=img/pixel-art-preset.png alt></p><h2 id=-altre-novità>🆕 Altre Novità</h2><p>Questa guida non è sufficiente? Se volete una lettura approfondita e completa,
 fate riferimento al
 <a href=https://github.com/godotengine/godot/blob/master/CHANGELOG.md>CHANGELOG</a>
-ufficiale.</p>
-<p>Se vuoi sapere quando nuove versioni di questa guida saranno disponibili, segui
-il <a href=https://t.me/crystalbit>canale Telegram</a> Crystal Bit!</p>
-<hr>
-<h2 id=nodi>Nodi</h2>
-<p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p>
-<h3 id=nodo-tilemap>Nodo TileMap</h3>
-<p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p>
-<h3 id=supporto-finestre-multiple>Supporto finestre multiple</h3>
-<p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p>
-<h2 id=giochi-pixel-art>Giochi Pixel Art</h2>
-<p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p>
-<h2 id=motore-fisico>Motore Fisico</h2>
-<p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p>
-</div>
-</div>
-</div>
-<hr>
-<div class="card rounded-container my-3">
-<div id=post-container class="card-body rounded-container-overlap">
-<h5>SUPPORTAMI</h5>
-<p>
-Questo sito web è privo di pubblicità ed i contenuti vengono rilasciati con licenze libere come CC-BY-SA e GPL.
-</p>
-<p> Se i contenuti ti piacciono e ti sono stati utili, considera
-di supportare il progetto.
-</p>
-<p>
-Visita <a href=https://crystal-bit.github.io/supporter/>la pagina
-supporter</a>.
-</p>
-</div>
-</div>
-<hr>
-<footer class="mastfoot mt-auto">
-<div class=row style=margin:auto>
-<div class=col-sm-8>
-<p>
-<a rel=license href=http://creativecommons.org/licenses/by-sa/4.0/></a>
-<a rel=license href=http://creativecommons.org/licenses/by-sa/4.0/>
-<img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-sa/4.0/80x15.png>
-</a>
-<span style=margin-left:6px>
-Davide Cristini, 2021.
-</span>
-</p>
-</div>
-<div class="col-sm-4 info">
-<a href=mailto:vitrumbit@gmail.com>
-Segnala un problema
-</a>
-</div>
-</div>
-</footer>
-</div>
-</div>
-<script type=text/javascript src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=it&tracking=1&thirdparty=1&always=1"></script>
-<script>function enableGoogleAnalytics(){window.dataLayer=window.dataLayer||[];function a(){dataLayer.push(arguments)}a('js',new Date),a('config',"UA-112742714-2")}function getCookiesAsObj(){return document.cookie.split(';').reduce((b,d)=>{const[c,a]=d.trim().split('=').map(decodeURIComponent),e=a=>/^\d+$/.test(a);try{return Object.assign(b,{[c]:e(a)?a:JSON.parse(a)})}catch(d){return Object.assign(b,{[c]:a})}},{})}document.addEventListener("DOMContentLoaded",function(b){const a=getCookiesAsObj();console.log('DEBUG: DOM loaded.'),a.cookiebar==='CookieAllowed'?(enableGoogleAnalytics(),console.log('DEBUG: ga enabled')):document.addEventListener('click',b=>{const a=getCookiesAsObj();console.log('DEBUG: click. Cookiebar is ',a.cookiebar==='CookieAllowed'),a.cookiebar==='CookieAllowed'&&this.enableGoogleAnalytics()})})</script>
-</body>
-</html>
+ufficiale.</p><p>Se vuoi sapere quando nuove versioni di questa guida saranno disponibili, segui
+il <a href=https://t.me/crystalbit>canale Telegram</a> Crystal Bit!</p><hr><h2 id=nodi>Nodi</h2><p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p><h3 id=nodo-tilemap>Nodo TileMap</h3><p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p><h3 id=supporto-finestre-multiple>Supporto finestre multiple</h3><p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p><h2 id=motore-fisico>Motore Fisico</h2><p>🔨 <em>Sto ancora preparando questa sezione! Sarà pronta tra qualche giorno :)</em></p></div></div></div><hr><div class="card rounded-container my-3"><div id=post-container class="card-body rounded-container-overlap"><h5>SUPPORTAMI</h5><p>Questo sito web è privo di pubblicità ed i contenuti vengono rilasciati con licenze libere come CC-BY-SA e GPL.</p><p>Se i contenuti ti piacciono e ti sono stati utili, considera
+di supportare il progetto.</p><p>Visita <a href=https://crystal-bit.github.io/supporter/>la pagina
+supporter</a>.</p></div></div><hr><footer class="mastfoot mt-auto"><div class=row style=margin:auto><div class=col-sm-8><p><a rel=license href=http://creativecommons.org/licenses/by-sa/4.0/></a>
+<a rel=license href=http://creativecommons.org/licenses/by-sa/4.0/><img alt="Creative Commons License" style=border-width:0 src=https://i.creativecommons.org/l/by-sa/4.0/80x15.png></a>
+<span style=margin-left:6px>Davide Cristini, 2021.</span></p></div><div class="col-sm-4 info"><a href=mailto:vitrumbit@gmail.com>Segnala un problema</a></div></div></footer></div></div><script type=text/javascript src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=it&tracking=1&thirdparty=1&always=1"></script><script>function enableGoogleAnalytics(){window.dataLayer=window.dataLayer||[];function e(){dataLayer.push(arguments)}e("js",new Date),e("config","UA-112742714-2")}function getCookiesAsObj(){return document.cookie.split(";").reduce((t,s)=>{const[n,e]=s.trim().split("=").map(decodeURIComponent),o=e=>/^\d+$/.test(e);try{return Object.assign(t,{[n]:o(e)?e:JSON.parse(e)})}catch(s){return Object.assign(t,{[n]:e})}},{})}document.addEventListener("DOMContentLoaded",function(){const e=getCookiesAsObj();console.log("DEBUG: DOM loaded."),e.cookiebar==="CookieAllowed"?(enableGoogleAnalytics(),console.log("DEBUG: ga enabled")):document.addEventListener("click",t=>{const e=getCookiesAsObj();console.log("DEBUG: click. Cookiebar is ",e.cookiebar==="CookieAllowed"),e.cookiebar==="CookieAllowed"&&this.enableGoogleAnalytics()})})</script></body></html>
